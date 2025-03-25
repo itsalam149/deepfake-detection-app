@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="/home.css">
+</head>
+<body>
+
+<%- include('partials/navbar') %>
+
+<main>
+  <div class="container">
+    <h2 class="slide-up">Welcome to Deepfake Detection App</h2>
+    <p class="fade-in">Choose a detector below to get started!</p>
+
+    <div class="cards">
+      <a href="/image" class="card">
+        <h3>🖼️ Image Detection</h3>
+        <p>Identify deepfakes in images.</p>
+      </a>
+
+      <a href="/content" class="card">
+        <h3>📝 Text Analysis</h3>
+        <p>Detect suspicious content patterns.</p>
+      </a>
+
+      <a href="/link" class="card">
+        <h3>🔗 Link Validation</h3>
+        <p>Check link authenticity.</p>
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <%- include('partials/footer') %>
+</footer>
+
+</body>
+</html>

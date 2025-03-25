@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Detection</title>
+  <link rel="stylesheet" href="/image.css">
+</head>
+<body>
+
+<%- include('partials/navbar') %>
+
+<main>
+  <div class="container">
+    <h2 class="slide-up">Upload an Image for Deepfake Detection</h2>
+    <form action="/upload" method="POST" enctype="multipart/form-data" class="upload-form">
+      <label for="file-upload" class="custom-file-upload">
+        Choose Image
+      </label>
+      <input id="file-upload" type="file" name="image" />
+      <button type="submit" class="btn-upload">Analyze</button>
+    </form>
+  </div>
+</main>
+
+<footer>
+  <%- include('partials/footer') %>
+</footer>
+
+</body>
+</html>

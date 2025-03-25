@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Deepfake Link Validation</title>
+  <link rel="stylesheet" href="/link.css">
+</head>
+<body>
+
+<%- include('partials/navbar') %>  <!-- Include the Navbar -->
+
+<main>
+  <div class="container">
+    <h2 class="slide-up">Enter a Link to Validate Potential Deepfake Content</h2>
+    <form action="/check-link" method="POST" class="link-form">
+      <input 
+        type="url" 
+        name="link" 
+        placeholder="Enter URL (e.g., https://example.com)" 
+        required 
+        pattern="https?://.+" 
+        title="Enter a valid URL starting with http or https"
+      />
+      <button type="submit" class="btn-check">Validate</button>
+    </form>
+  </div>
+</main>
+
+<footer>
+  <%- include('partials/footer') %>
+</footer>
+
+</body>
+</html>

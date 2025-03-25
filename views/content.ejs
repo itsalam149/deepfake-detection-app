@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Deepfake Text Analysis</title>
+  <link rel="stylesheet" href="/content.css">
+</head>
+<body>
+
+<%- include('partials/navbar') %>  <!-- Include the Navbar -->
+
+<main>
+  <div class="container">
+    <h2 class="slide-up">Analyze Text for Deepfake Indicators</h2>
+    <form action="/check-content" method="POST" class="content-form">
+      <textarea 
+        name="content" 
+        placeholder="Paste or type text to detect deepfake indicators..." 
+        required
+      ></textarea>
+      <button type="submit" class="btn-check">Analyze</button>
+    </form>
+  </div>
+</main>
+
+<footer>
+  <%- include('partials/footer') %>
+</footer>
+
+</body>
+</html>
